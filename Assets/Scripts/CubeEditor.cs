@@ -4,15 +4,22 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
 [ExecuteInEditMode]
-public class EditorSnap : MonoBehaviour {
+[SelectionBase]
+public class CubeEditor : MonoBehaviour {
 
 	[Range(1f, 20f)][SerializeField] float gridSize = 10f;
 
+	TextMesh textMesh;
+
 	void Update() {
+
 		Vector3 snapPos;
+
 		snapPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
 		snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
-
 		transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
+
+		textMesh = GetComponentInChildren<TextMesh>();
+		textMesh.text = snapPos.x / gridSize+ "," + snapPos.z / gridSize;
 	}
 }
