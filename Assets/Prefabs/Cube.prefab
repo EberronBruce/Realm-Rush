@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2247035987613338297}
   - component: {fileID: 2151067409655207671}
   m_Layer: 0
-  m_Name: Blue Quad
+  m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2d13703f75b7d4ed5a7262052eb10231, type: 2}
+  - {fileID: 2100000, guid: c01b00d14c7e14c68bf7cb1e6e8dfdef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3480717932076762438}
   - component: {fileID: 8902929449906325711}
   m_Layer: 0
-  m_Name: Purple Quad
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6caeffb17018f4c72b64fbb2fc826ac1, type: 2}
+  - {fileID: 2100000, guid: 2d13703f75b7d4ed5a7262052eb10231, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -195,8 +195,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 630813195384890520}
+  - component: {fileID: 1484182133}
   m_Layer: 0
-  m_Name: Multi-Color Cube
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 4985316045659199413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 6386737114827915129}
   - {fileID: 5162260051499803532}
@@ -222,6 +223,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1484182133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985316045659199413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc676fa05b5b49df9d12a6875c92651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 10
 --- !u!1 &6983613095972904114
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +249,7 @@ GameObject:
   - component: {fileID: 8985385580476564585}
   - component: {fileID: 7879278500255136764}
   m_Layer: 0
-  m_Name: Yellow Quad
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9928c5d65521d46e9a6ba63cc958f6cc, type: 2}
+  - {fileID: 2100000, guid: c01b00d14c7e14c68bf7cb1e6e8dfdef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -328,7 +342,7 @@ GameObject:
   - component: {fileID: 3797035116106654831}
   - component: {fileID: 2416162142682808402}
   m_Layer: 0
-  m_Name: Pink Quad
+  m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,7 +387,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a65cdec580b164f92903a2f740149cfb, type: 2}
+  - {fileID: 2100000, guid: c01b00d14c7e14c68bf7cb1e6e8dfdef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -421,7 +435,7 @@ GameObject:
   - component: {fileID: 5298157522811565833}
   - component: {fileID: 6451090982511362048}
   m_Layer: 0
-  m_Name: Green Quad
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +480,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e5637fc42e88421699e3d17528f4927, type: 2}
+  - {fileID: 2100000, guid: 06d3fc8244e284d94b76ac9be843c8ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -514,7 +528,7 @@ GameObject:
   - component: {fileID: 1507243957031214775}
   - component: {fileID: 9164890283796491000}
   m_Layer: 0
-  m_Name: Red Quad
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +573,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 06d3fc8244e284d94b76ac9be843c8ac, type: 2}
+  - {fileID: 2100000, guid: 3e5637fc42e88421699e3d17528f4927, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
