@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-	[SerializeField] List<Block> path;
+	[SerializeField] List<Waypoint > path;
 
 	// Start is called before the first frame update
 	void Start() {
-		PrintAllWaypoints();
+		StartCoroutine(FollowPath());
 	}
 
-	private void PrintAllWaypoints() {
-		foreach(Block waypoint in path) {
-			print(waypoint);
+	IEnumerator FollowPath() { 
+		print("Starting patrol...");
+		foreach(Waypoint waypoint in path) {
+			transform.position = waypoint.transform.position;
+			print("Visting block: " + waypoint.name);
+			yield return new WaitForSeconds(1f);
 		}
+		print("Ending Patrol");
 	}
 
-	// Update is called once per frame
-	void Update() {
-
-	}
 }
