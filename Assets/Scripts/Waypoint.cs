@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour {
 
-	[SerializeField] Color exploredColor;
-
 	// public ok here as is a data class
 	public bool isExplored = false;
 	public Waypoint exploredFrom;
@@ -18,12 +16,6 @@ public class Waypoint : MonoBehaviour {
 		return gridSize;
 	}
 
-	private void Update() {
-		if(isExplored) {
-			//SetTopColor(exploredColor);
-		}
-	}
-
 	public Vector2Int GetGridPos() {
 		return new Vector2Int(
 		Mathf.RoundToInt(transform.position.x / gridSize),
@@ -31,10 +23,8 @@ public class Waypoint : MonoBehaviour {
 		);
 	}
 
-	public void SetTopColor(Color color) {
-		MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-		topMeshRenderer.material.color = color;
+	private void OnMouseOver() {
+		Debug.Log("Mouse is over " + gameObject.name);
 	}
-
 
 }
