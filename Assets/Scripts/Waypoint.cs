@@ -7,6 +7,7 @@ public class Waypoint : MonoBehaviour {
 	// public ok here as is a data class
 	public bool isExplored = false;
 	public Waypoint exploredFrom;
+	public bool isPlaceable = true;
 
 	Vector2Int gridPos;
 
@@ -24,7 +25,13 @@ public class Waypoint : MonoBehaviour {
 	}
 
 	private void OnMouseOver() {
-		Debug.Log("Mouse is over " + gameObject.name);
+		if(Input.GetMouseButtonDown(0))
+			if(isPlaceable) {
+				Debug.Log("Tower can be place here at: " + gameObject.name);
+			} else {
+				Debug.Log("Tower CANNOT be placed here at: " + gameObject.name);
+			}
+			
+		}
 	}
 
-}
