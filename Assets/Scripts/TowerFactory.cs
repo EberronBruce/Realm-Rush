@@ -21,22 +21,23 @@ public class TowerFactory : MonoBehaviour {
 
 	private void InstantiateNewTower(Waypoint baseWaypoint) {
 		var tower = Instantiate(towerPrefab, baseWaypoint.transform.position, Quaternion.identity);
-		baseWaypoint.isPlaceable = false;
 
 		tower.BaseWaypoint = baseWaypoint;
+		baseWaypoint.isPlaceable = false;
 
 		towersQueue.Enqueue(tower);
 	}
 
-	private void MoveExistingTower(Waypoint baseWaypoint) {
+	private void MoveExistingTower(Waypoint newBaseWaypoint) {
 	
 		var oldTower = towersQueue.Dequeue();
-		// Set placable flags
 		oldTower.BaseWaypoint.isPlaceable = true;
-		////set the baseWaypoints
-		//oldTower.BaseWaypoint = baseWaypoint;
-		//// put the old tower on to of the queue
-		//towersQueue.Enqueue(oldTower);
+		newBaseWaypoint.isPlaceable = false;
+
+		oldTower.BaseWaypoint = newBaseWaypoint;
+		oldTower.transform.position = newBaseWaypoint.transform.position;
+		
+		towersQueue.Enqueue(oldTower);
 	}
 
 }
